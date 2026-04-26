@@ -1,0 +1,450 @@
+
+<h2 class="sr-only">কলাপাড়া উপজেলা সম্পূর্ণ তথ্য প্রোফাইল — জনসংখ্যা, শিক্ষা, কৃষি, স্বাস্থ্য, অর্থনীতি ও দুর্যোগ</h2>
+
+<style>
+.section-title { font-size: 15px; font-weight: 500; color: var(--color-text-primary); margin: 0 0 12px; padding-bottom: 8px; border-bottom: 0.5px solid var(--color-border-tertiary); }
+.card { background: var(--color-background-primary); border: 0.5px solid var(--color-border-tertiary); border-radius: var(--border-radius-lg); padding: 1rem 1.25rem; }
+.metric { background: var(--color-background-secondary); border-radius: var(--border-radius-md); padding: 0.85rem; text-align: center; }
+.metric-label { font-size: 11px; color: var(--color-text-secondary); margin: 0 0 4px; }
+.metric-val { font-size: 20px; font-weight: 500; margin: 0; color: var(--color-text-primary); }
+.bar-row { display: flex; align-items: center; gap: 8px; margin-bottom: 10px; font-size: 12px; }
+.bar-label { min-width: 120px; color: var(--color-text-secondary); }
+.bar-track { flex: 1; background: var(--color-border-tertiary); border-radius: 4px; height: 7px; }
+.bar-fill { height: 100%; border-radius: 4px; }
+.bar-pct { min-width: 36px; text-align: right; font-weight: 500; color: var(--color-text-primary); }
+.tag { display: inline-block; font-size: 11px; padding: 3px 10px; border-radius: 20px; margin: 3px 3px 3px 0; font-weight: 500; }
+.info-row { display: flex; justify-content: space-between; padding: 6px 0; border-bottom: 0.5px solid var(--color-border-tertiary); font-size: 13px; }
+.info-row:last-child { border-bottom: none; }
+.grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+.grid4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); gap: 10px; }
+.grid3 { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 10px; }
+.section { margin-bottom: 1.5rem; }
+.tab-nav { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 1rem; }
+.tab-btn { font-size: 12px; padding: 6px 14px; border-radius: 20px; border: 0.5px solid var(--color-border-secondary); background: var(--color-background-secondary); color: var(--color-text-secondary); cursor: pointer; font-weight: 500; }
+.tab-btn.active { background: var(--color-text-primary); color: var(--color-background-primary); border-color: transparent; }
+.tab-section { display: none; }
+.tab-section.active { display: block; }
+.disaster-card { border-left: 3px solid #E24B4A; border-radius: 0; background: var(--color-background-secondary); padding: 0.75rem 1rem; margin-bottom: 8px; border-radius: 0 var(--border-radius-md) var(--border-radius-md) 0; }
+</style>
+
+<div style="padding: 1rem 0;">
+
+<!-- Header -->
+<div style="background: var(--color-background-secondary); border-radius: var(--border-radius-lg); padding: 1rem 1.25rem; margin-bottom: 1.5rem; border: 0.5px solid var(--color-border-tertiary); display: flex; align-items: center; gap: 12px;">
+  <div style="width: 44px; height: 44px; border-radius: 50%; background: #E6F1FB; display: flex; align-items: center; justify-content: center; font-size: 20px; flex-shrink: 0;">🗺️</div>
+  <div>
+    <p style="font-size: 16px; font-weight: 500; margin: 0; color: var(--color-text-primary);">কলাপাড়া উপজেলা — সম্পূর্ণ তথ্য প্রোফাইল</p>
+    <p style="font-size: 12px; color: var(--color-text-secondary); margin: 0;">পটুয়াখালী জেলা, বরিশাল বিভাগ | উৎস: BBS Census 2011, Banglapedia, Wikimapia, ReliefWeb</p>
+  </div>
+</div>
+
+<!-- Tab Navigation -->
+<div class="tab-nav">
+  <button class="tab-btn active" onclick="showTab('population')">👥 জনসংখ্যা</button>
+  <button class="tab-btn" onclick="showTab('education')">📚 শিক্ষা</button>
+  <button class="tab-btn" onclick="showTab('agriculture')">🌾 কৃষি</button>
+  <button class="tab-btn" onclick="showTab('economy')">💼 অর্থনীতি</button>
+  <button class="tab-btn" onclick="showTab('health')">🏥 স্বাস্থ্য</button>
+  <button class="tab-btn" onclick="showTab('disaster')">⚠️ দুর্যোগ</button>
+  <button class="tab-btn" onclick="showTab('infra')">🏗️ অবকাঠামো</button>
+</div>
+
+<!-- POPULATION TAB -->
+<div id="tab-population" class="tab-section active">
+  <div class="grid4 section">
+    <div class="metric"><p class="metric-label">মোট জনসংখ্যা (২০১১)</p><p class="metric-val">২,৩৭,৮৩১</p></div>
+    <div class="metric"><p class="metric-label">আনু. ২০২৫-২৬</p><p class="metric-val">~২,৮০,০০০</p></div>
+    <div class="metric"><p class="metric-label">মোট পরিবার</p><p class="metric-val">৫৭,৫২৫</p></div>
+    <div class="metric"><p class="metric-label">জনঘনত্ব/কিমি²</p><p class="metric-val">৪৮৪</p></div>
+    <div class="metric"><p class="metric-label">পুরুষ</p><p class="metric-val">১,২০,৫১৪</p></div>
+    <div class="metric"><p class="metric-label">মহিলা</p><p class="metric-val">১,১৭,৩১৭</p></div>
+    <div class="metric"><p class="metric-label">লিঙ্গ অনুপাত</p><p class="metric-val">৯৯৩/১০০০</p></div>
+    <div class="metric"><p class="metric-label">শহরে বাসিন্দা</p><p class="metric-val">১৪.৮৭%</p></div>
+  </div>
+
+  <div class="grid2">
+    <div class="card">
+      <p class="section-title">বয়স বিভাজন</p>
+      <div class="bar-row"><span class="bar-label">০–১০ বছর</span><div class="bar-track"><div class="bar-fill" style="width:100%;background:#185FA5;"></div></div><span class="bar-pct">১৯.৯৪%</span></div>
+      <div class="bar-row"><span class="bar-label">১১–১৮ বছর</span><div class="bar-track"><div class="bar-fill" style="width:90%;background:#378ADD;"></div></div><span class="bar-pct">~১৮%</span></div>
+      <div class="bar-row"><span class="bar-label">১৯–৩৫ বছর</span><div class="bar-track"><div class="bar-fill" style="width:100%;background:#1D9E75;"></div></div><span class="bar-pct">~২৫%</span></div>
+      <div class="bar-row"><span class="bar-label">৩৬–৫৯ বছর</span><div class="bar-track"><div class="bar-fill" style="width:100%;background:#EF9F27;"></div></div><span class="bar-pct">~২৫%</span></div>
+      <div class="bar-row"><span class="bar-label">৬০+ বছর</span><div class="bar-track"><div class="bar-fill" style="width:48%;background:#888780;"></div></div><span class="bar-pct">~১২%</span></div>
+    </div>
+    <div class="card">
+      <p class="section-title">ধর্ম অনুযায়ী</p>
+      <div class="bar-row"><span class="bar-label">মুসলিম</span><div class="bar-track"><div class="bar-fill" style="width:94.7%;background:#1D9E75;"></div></div><span class="bar-pct">৯৪.৭%</span></div>
+      <div class="bar-row"><span class="bar-label">হিন্দু</span><div class="bar-track"><div class="bar-fill" style="width:4.7%;background:#EF9F27;"></div></div><span class="bar-pct">৪.৭%</span></div>
+      <div class="bar-row"><span class="bar-label">বৌদ্ধ</span><div class="bar-track"><div class="bar-fill" style="width:0.5%;background:#7F77DD;"></div></div><span class="bar-pct">০.৫%</span></div>
+      <div class="bar-row"><span class="bar-label">খ্রিষ্টান</span><div class="bar-track"><div class="bar-fill" style="width:0.06%;background:#D85A30;"></div></div><span class="bar-pct">০.০৬%</span></div>
+      <p style="font-size:12px;color:var(--color-text-secondary);margin:12px 0 0;">রাখাইন আদিবাসী: ১০৪ পরিবার, ৪৭৪ জন</p>
+    </div>
+  </div>
+
+  <div style="margin-top:1rem;" class="card">
+    <p class="section-title">ইউনিয়ন পরিষদ ও পৌরসভা</p>
+    <div style="display:flex;flex-wrap:wrap;gap:6px;">
+      <span class="tag" style="background:#E6F1FB;color:#0C447C;">কলাপাড়া পৌরসভা</span>
+      <span class="tag" style="background:#E6F1FB;color:#0C447C;">কুয়াকাটা পৌরসভা</span>
+      <span class="tag" style="background:#EAF3DE;color:#27500A;">বালিয়াতলী</span>
+      <span class="tag" style="background:#EAF3DE;color:#27500A;">চাকামাইয়া</span>
+      <span class="tag" style="background:#EAF3DE;color:#27500A;">চম্পাপুর</span>
+      <span class="tag" style="background:#EAF3DE;color:#27500A;">ডালবুগঞ্জ</span>
+      <span class="tag" style="background:#EAF3DE;color:#27500A;">ধানখালী</span>
+      <span class="tag" style="background:#EAF3DE;color:#27500A;">দুলাশার</span>
+      <span class="tag" style="background:#EAF3DE;color:#27500A;">লালুয়া</span>
+      <span class="tag" style="background:#EAF3DE;color:#27500A;">লতাচাপলী</span>
+      <span class="tag" style="background:#EAF3DE;color:#27500A;">মহিপুর</span>
+      <span class="tag" style="background:#EAF3DE;color:#27500A;">মিহাগঞ্জ</span>
+      <span class="tag" style="background:#EAF3DE;color:#27500A;">নীলগঞ্জ</span>
+      <span class="tag" style="background:#EAF3DE;color:#27500A;">তিয়াখালী</span>
+    </div>
+    <p style="font-size:12px;color:var(--color-text-secondary);margin:10px 0 0;">মোট মৌজা: ৫৮ | গ্রাম: ২১৭ | মহল্লা: ২৪</p>
+  </div>
+</div>
+
+<!-- EDUCATION TAB -->
+<div id="tab-education" class="tab-section">
+  <div class="grid4 section">
+    <div class="metric"><p class="metric-label">গড় সাক্ষরতা (২০১১)</p><p class="metric-val">৫২.০%</p></div>
+    <div class="metric"><p class="metric-label">পুরুষ সাক্ষরতা</p><p class="metric-val">৫২.৬%</p></div>
+    <div class="metric"><p class="metric-label">মহিলা সাক্ষরতা</p><p class="metric-val">৫১.৫%</p></div>
+    <div class="metric"><p class="metric-label">জাতীয় গড় (২০১১)</p><p class="metric-val">৫১.৮%</p></div>
+  </div>
+
+  <div class="grid2 section">
+    <div class="card">
+      <p class="section-title">শিক্ষা প্রতিষ্ঠান সংখ্যা</p>
+      <div class="info-row"><span style="color:var(--color-text-secondary);">কলেজ</span><span style="font-weight:500;">৭টি</span></div>
+      <div class="info-row"><span style="color:var(--color-text-secondary);">মাধ্যমিক বিদ্যালয়</span><span style="font-weight:500;">৩৯টি</span></div>
+      <div class="info-row"><span style="color:var(--color-text-secondary);">প্রাথমিক বিদ্যালয়</span><span style="font-weight:500;">১৫০টি</span></div>
+      <div class="info-row"><span style="color:var(--color-text-secondary);">মাদ্রাসা</span><span style="font-weight:500;">২৬টি</span></div>
+    </div>
+    <div class="card">
+      <p class="section-title">উল্লেখযোগ্য শিক্ষা প্রতিষ্ঠান</p>
+      <div class="info-row"><span style="color:var(--color-text-secondary);">মোজাহারউদ্দিন বিশ্বাস কলেজ</span><span style="font-weight:500;">১৯৭৭</span></div>
+      <div class="info-row"><span style="color:var(--color-text-secondary);">ধানখালী কলেজ</span><span style="font-weight:500;">১৯৯৪</span></div>
+      <div class="info-row"><span style="color:var(--color-text-secondary);">কুয়াকাটা কলেজ</span><span style="font-weight:500;">২০০১</span></div>
+      <div class="info-row"><span style="color:var(--color-text-secondary);">খেপুপাড়া মাধ্যমিক বিদ্যালয়</span><span style="font-weight:500;">১৯২৮</span></div>
+    </div>
+  </div>
+
+  <div class="card section">
+    <p class="section-title">সাক্ষরতার ধারা (তুলনা)</p>
+    <div class="bar-row"><span class="bar-label">কলাপাড়া (২০১১)</span><div class="bar-track"><div class="bar-fill" style="width:52%;background:#185FA5;"></div></div><span class="bar-pct">৫২.০%</span></div>
+    <div class="bar-row"><span class="bar-label">জাতীয় গড় (২০১১)</span><div class="bar-track"><div class="bar-fill" style="width:51.8%;background:#888780;"></div></div><span class="bar-pct">৫১.৮%</span></div>
+    <div class="bar-row"><span class="bar-label">পটুয়াখালী জেলা</span><div class="bar-track"><div class="bar-fill" style="width:54.1%;background:#1D9E75;"></div></div><span class="bar-pct">৫৪.১%</span></div>
+    <div class="bar-row"><span class="bar-label">কলাপাড়া পৌর (শহর)</span><div class="bar-track"><div class="bar-fill" style="width:39.37%;background:#EF9F27;"></div></div><span class="bar-pct">৩৯.৩৭%</span></div>
+    <p style="font-size:12px;color:var(--color-text-secondary);margin:10px 0 0;">⚠️ ১৯৯১ সালে সাক্ষরতা ছিল মাত্র ৩৪.৯% — গত ৩০ বছরে উল্লেখযোগ্য অগ্রগতি হয়েছে।</p>
+  </div>
+</div>
+
+<!-- AGRICULTURE TAB -->
+<div id="tab-agriculture" class="tab-section">
+  <div class="grid4 section">
+    <div class="metric"><p class="metric-label">চাষযোগ্য জমি</p><p class="metric-val">৪৫,৩২৮ হেক্টর</p></div>
+    <div class="metric"><p class="metric-label">পতিত জমি</p><p class="metric-val">৯৩ হেক্টর</p></div>
+    <div class="metric"><p class="metric-label">দ্বিগুণ ফসলি</p><p class="metric-val">১০.৫৯%</p></div>
+    <div class="metric"><p class="metric-label">সেচের আওতায়</p><p class="metric-val">১.৭৫%</p></div>
+  </div>
+
+  <div class="grid2 section">
+    <div class="card">
+      <p class="section-title">কৃষিজমির মালিকানা</p>
+      <div class="bar-row"><span class="bar-label">ভূমিহীন কৃষক</span><div class="bar-track"><div class="bar-fill" style="width:41.53%;background:#E24B4A;"></div></div><span class="bar-pct">৪১.৫৩%</span></div>
+      <div class="bar-row"><span class="bar-label">ক্ষুদ্র কৃষক</span><div class="bar-track"><div class="bar-fill" style="width:35.06%;background:#EF9F27;"></div></div><span class="bar-pct">৩৫.০৬%</span></div>
+      <div class="bar-row"><span class="bar-label">মাঝারি কৃষক</span><div class="bar-track"><div class="bar-fill" style="width:15.04%;background:#1D9E75;"></div></div><span class="bar-pct">১৫.০৪%</span></div>
+      <div class="bar-row"><span class="bar-label">সচ্ছল কৃষক</span><div class="bar-track"><div class="bar-fill" style="width:8.37%;background:#185FA5;"></div></div><span class="bar-pct">৮.৩৭%</span></div>
+      <p style="font-size:12px;color:var(--color-text-secondary);margin:10px 0 0;">মাথাপিছু চাষযোগ্য জমি: ০.২৫৯ হেক্টর</p>
+    </div>
+    <div class="card">
+      <p class="section-title">ফসল ও মৎস্য</p>
+      <p style="font-size:12px;font-weight:500;color:var(--color-text-secondary);margin:0 0 6px;">প্রধান ফসল:</p>
+      <div style="display:flex;flex-wrap:wrap;gap:4px;margin-bottom:10px;">
+        <span class="tag" style="background:#EAF3DE;color:#27500A;">ধান</span>
+        <span class="tag" style="background:#EAF3DE;color:#27500A;">ডাল</span>
+        <span class="tag" style="background:#EAF3DE;color:#27500A;">আলু</span>
+        <span class="tag" style="background:#EAF3DE;color:#27500A;">সবজি</span>
+        <span class="tag" style="background:#EAF3DE;color:#27500A;">সরিষা</span>
+      </div>
+      <p style="font-size:12px;font-weight:500;color:var(--color-text-secondary);margin:0 0 6px;">প্রধান ফল:</p>
+      <div style="display:flex;flex-wrap:wrap;gap:4px;margin-bottom:10px;">
+        <span class="tag" style="background:#FAEEDA;color:#633806;">কলা</span>
+        <span class="tag" style="background:#FAEEDA;color:#633806;">পেঁপে</span>
+        <span class="tag" style="background:#FAEEDA;color:#633806;">নারিকেল</span>
+        <span class="tag" style="background:#FAEEDA;color:#633806;">পেয়ারা</span>
+        <span class="tag" style="background:#FAEEDA;color:#633806;">তরমুজ</span>
+      </div>
+      <div class="info-row"><span style="color:var(--color-text-secondary);">চিংড়ি খামার</span><span style="font-weight:500;">২৮টি</span></div>
+      <div class="info-row"><span style="color:var(--color-text-secondary);">পোল্ট্রি</span><span style="font-weight:500;">৪৫টি</span></div>
+      <div class="info-row"><span style="color:var(--color-text-secondary);">হ্যাচারি</span><span style="font-weight:500;">১টি</span></div>
+    </div>
+  </div>
+
+  <div class="card section">
+    <p class="section-title">প্রধান রপ্তানি পণ্য ও কুটির শিল্প</p>
+    <div class="grid2" style="gap:12px;">
+      <div>
+        <p style="font-size:12px;font-weight:500;color:var(--color-text-secondary);margin:0 0 6px;">রপ্তানি:</p>
+        <div style="display:flex;flex-wrap:wrap;gap:4px;">
+          <span class="tag" style="background:#E1F5EE;color:#085041;">ধান</span>
+          <span class="tag" style="background:#E1F5EE;color:#085041;">ইলিশ মাছ</span>
+          <span class="tag" style="background:#E1F5EE;color:#085041;">শুঁটকি মাছ</span>
+        </div>
+      </div>
+      <div>
+        <p style="font-size:12px;font-weight:500;color:var(--color-text-secondary);margin:0 0 6px;">কুটির শিল্প:</p>
+        <div style="display:flex;flex-wrap:wrap;gap:4px;">
+          <span class="tag" style="background:#EEEDFE;color:#26215C;">বাঁশ ও বেতশিল্প</span>
+          <span class="tag" style="background:#EEEDFE;color:#26215C;">তাঁতশিল্প</span>
+          <span class="tag" style="background:#EEEDFE;color:#26215C;">কামার</span>
+          <span class="tag" style="background:#EEEDFE;color:#26215C;">কারপেন্ট্রি</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ECONOMY TAB -->
+<div id="tab-economy" class="tab-section">
+  <div class="card section">
+    <p class="section-title">আয়ের উৎস বিভাজন</p>
+    <div style="position:relative;height:260px;">
+      <canvas id="econChart" role="img" aria-label="আয়ের উৎস: কৃষি ৫৭.২৩%, ব্যবসা ১৩.৫%, অন্যান্য ১৫.৫৭%">কৃষি: ৫৭.২৩%</canvas>
+    </div>
+  </div>
+  <div class="grid2 section">
+    <div class="card">
+      <p class="section-title">পেশাভিত্তিক বিভাজন</p>
+      <div class="bar-row"><span class="bar-label">কৃষি</span><div class="bar-track"><div class="bar-fill" style="width:45.63%;background:#1D9E75;"></div></div><span class="bar-pct">৪৫.৬৩%</span></div>
+      <div class="bar-row"><span class="bar-label">কৃষিশ্রমিক</span><div class="bar-track"><div class="bar-fill" style="width:18.89%;background:#EF9F27;"></div></div><span class="bar-pct">১৮.৮৯%</span></div>
+      <div class="bar-row"><span class="bar-label">ব্যবসা</span><div class="bar-track"><div class="bar-fill" style="width:10.01%;background:#185FA5;"></div></div><span class="bar-pct">১০.০১%</span></div>
+      <div class="bar-row"><span class="bar-label">মৎস্যজীবী</span><div class="bar-track"><div class="bar-fill" style="width:5.67%;background:#5DCAA5;"></div></div><span class="bar-pct">৫.৬৭%</span></div>
+      <div class="bar-row"><span class="bar-label">সেবা/চাকরি</span><div class="bar-track"><div class="bar-fill" style="width:3.56%;background:#7F77DD;"></div></div><span class="bar-pct">৩.৫৬%</span></div>
+      <div class="bar-row"><span class="bar-label">দিনমজুর</span><div class="bar-track"><div class="bar-fill" style="width:4.57%;background:#D85A30;"></div></div><span class="bar-pct">৪.৫৭%</span></div>
+    </div>
+    <div class="card">
+      <p class="section-title">ব্যাংক ও এনজিও</p>
+      <p style="font-size:12px;font-weight:500;color:var(--color-text-secondary);margin:0 0 6px;">সরকারি ব্যাংক:</p>
+      <div style="display:flex;flex-wrap:wrap;gap:4px;margin-bottom:10px;">
+        <span class="tag" style="background:#E6F1FB;color:#0C447C;">সোনালী</span>
+        <span class="tag" style="background:#E6F1FB;color:#0C447C;">অগ্রণী</span>
+        <span class="tag" style="background:#E6F1FB;color:#0C447C;">পূবালী</span>
+        <span class="tag" style="background:#E6F1FB;color:#0C447C;">জনতা</span>
+      </div>
+      <p style="font-size:12px;font-weight:500;color:var(--color-text-secondary);margin:0 0 6px;">সক্রিয় এনজিও:</p>
+      <div style="display:flex;flex-wrap:wrap;gap:4px;">
+        <span class="tag" style="background:#EEEDFE;color:#26215C;">ব্র্যাক</span>
+        <span class="tag" style="background:#EEEDFE;color:#26215C;">কারিতাস</span>
+        <span class="tag" style="background:#EEEDFE;color:#26215C;">আশা</span>
+        <span class="tag" style="background:#EEEDFE;color:#26215C;">কোডেক</span>
+        <span class="tag" style="background:#EEEDFE;color:#26215C;">গ্রামীণ ব্যাংক</span>
+      </div>
+      <p style="font-size:12px;color:var(--color-text-secondary);margin:12px 0 0;">হাটবাজার: ~৫০টি | বড় বাজার: কলাপাড়া হাট, মহিপুর হাট</p>
+    </div>
+  </div>
+  <div class="card section">
+    <p class="section-title">শিল্প প্রতিষ্ঠান</p>
+    <div class="grid4">
+      <div class="info-row" style="flex-direction:column;text-align:center;border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-md);padding:8px;"><span style="font-size:18px;font-weight:500;">৩৫</span><span style="font-size:11px;color:var(--color-text-secondary);">রাইস মিল</span></div>
+      <div class="info-row" style="flex-direction:column;text-align:center;border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-md);padding:8px;"><span style="font-size:18px;font-weight:500;">২৫</span><span style="font-size:11px;color:var(--color-text-secondary);">আইস মিল</span></div>
+      <div class="info-row" style="flex-direction:column;text-align:center;border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-md);padding:8px;"><span style="font-size:18px;font-weight:500;">৬</span><span style="font-size:11px;color:var(--color-text-secondary);">আটা মিল</span></div>
+      <div class="info-row" style="flex-direction:column;text-align:center;border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-md);padding:8px;"><span style="font-size:18px;font-weight:500;">৬</span><span style="font-size:11px;color:var(--color-text-secondary);">স'মিল</span></div>
+    </div>
+    <p style="font-size:12px;color:var(--color-text-secondary);margin:10px 0 0;">⚠️ দারিদ্র্য হার: প্রায় ৪০% মানুষ দারিদ্র্যসীমার নিচে বসবাস করেন।</p>
+  </div>
+</div>
+
+<!-- HEALTH TAB -->
+<div id="tab-health" class="tab-section">
+  <div class="grid3 section">
+    <div class="metric"><p class="metric-label">উপজেলা স্বাস্থ্য কমপ্লেক্স</p><p class="metric-val">১টি</p></div>
+    <div class="metric"><p class="metric-label">স্যাটেলাইট ক্লিনিক</p><p class="metric-val">১টি</p></div>
+    <div class="metric"><p class="metric-label">পরিবার পরিকল্পনা কেন্দ্র</p><p class="metric-val">৯টি</p></div>
+    <div class="metric"><p class="metric-label">বেসরকারি ক্লিনিক</p><p class="metric-val">১+</p></div>
+    <div class="metric"><p class="metric-label">স্যানিটারি পায়খানা</p><p class="metric-val">৭০.৯%</p></div>
+    <div class="metric"><p class="metric-label">নলকূপ থেকে পানি</p><p class="metric-val">৯৭.৬%</p></div>
+  </div>
+
+  <div class="card section">
+    <p class="section-title">প্রধান স্বাস্থ্য সমস্যা (ঝুঁকির মাত্রা)</p>
+    <div class="bar-row"><span class="bar-label">ডায়রিয়া / কলেরা</span><div class="bar-track"><div class="bar-fill" style="width:90%;background:#E24B4A;"></div></div><span class="bar-pct">অতি উচ্চ</span></div>
+    <div class="bar-row"><span class="bar-label">লবণাক্ততাজনিত রোগ</span><div class="bar-track"><div class="bar-fill" style="width:80%;background:#D85A30;"></div></div><span class="bar-pct">উচ্চ</span></div>
+    <div class="bar-row"><span class="bar-label">শ্বাসতন্ত্রের রোগ</span><div class="bar-track"><div class="bar-fill" style="width:78%;background:#378ADD;"></div></div><span class="bar-pct">উচ্চ</span></div>
+    <div class="bar-row"><span class="bar-label">টাইফয়েড</span><div class="bar-track"><div class="bar-fill" style="width:70%;background:#EF9F27;"></div></div><span class="bar-pct">মধ্যম</span></div>
+    <div class="bar-row"><span class="bar-label">চর্মরোগ</span><div class="bar-track"><div class="bar-fill" style="width:65%;background:#7F77DD;"></div></div><span class="bar-pct">মধ্যম</span></div>
+    <div class="bar-row"><span class="bar-label">ডেঙ্গু</span><div class="bar-track"><div class="bar-fill" style="width:55%;background:#D4537E;"></div></div><span class="bar-pct">মধ্যম</span></div>
+    <div class="bar-row"><span class="bar-label">মাতৃস্বাস্থ্য সমস্যা</span><div class="bar-track"><div class="bar-fill" style="width:60%;background:#1D9E75;"></div></div><span class="bar-pct">মধ্যম</span></div>
+  </div>
+
+  <div class="card section">
+    <p class="section-title">স্বাস্থ্য চ্যালেঞ্জ</p>
+    <div class="info-row"><span style="color:var(--color-text-secondary);">লবণাক্ত পানি</span><span style="font-weight:500;color:#E24B4A;">উপকূলীয় সমস্যা</span></div>
+    <div class="info-row"><span style="color:var(--color-text-secondary);">দুর্যোগকালে মাতৃসেবা</span><span style="font-weight:500;color:#E24B4A;">৪০০+ গর্ভবতী ঝুঁকিতে (২০২৪)</span></div>
+    <div class="info-row"><span style="color:var(--color-text-secondary);">বিশেষজ্ঞ ডাক্তার ঘাটতি</span><span style="font-weight:500;color:#EF9F27;">গুরুতর সমস্যা</span></div>
+    <div class="info-row"><span style="color:var(--color-text-secondary);">নৌকাভিত্তিক স্বাস্থ্যসেবা</span><span style="font-weight:500;color:#1D9E75;">কিছু এলাকায় সক্রিয়</span></div>
+    <div class="info-row"><span style="color:var(--color-text-secondary);">নৌবাহিনী ফ্রি ক্যাম্প</span><span style="font-weight:500;color:#185FA5;">২০২৫ সালে পরিচালিত</span></div>
+  </div>
+</div>
+
+<!-- DISASTER TAB -->
+<div id="tab-disaster" class="tab-section">
+  <div class="grid4 section">
+    <div class="metric"><p class="metric-label">বার্ষিক ঘূর্ণিঝড়</p><p class="metric-val">বছরে ২বার</p></div>
+    <div class="metric"><p class="metric-label">সিডর ক্ষতিগ্রস্ত</p><p class="metric-val">২,১০,০০০+</p></div>
+    <div class="metric"><p class="metric-label">সিডরে মৃত্যু</p><p class="metric-val">৯৪ জন</p></div>
+    <div class="metric"><p class="metric-label">সিডরে ঘর ধ্বংস</p><p class="metric-val">২৭,৮৯৫টি</p></div>
+  </div>
+
+  <div class="card section">
+    <p class="section-title">বড় দুর্যোগের তুলনামূলক প্রভাব</p>
+    <div style="overflow-x:auto;">
+      <table style="width:100%;font-size:12px;border-collapse:collapse;">
+        <thead>
+          <tr style="border-bottom:0.5px solid var(--color-border-tertiary);">
+            <th style="text-align:left;padding:6px 8px;color:var(--color-text-secondary);font-weight:500;">ঘূর্ণিঝড়</th>
+            <th style="text-align:right;padding:6px 8px;color:var(--color-text-secondary);font-weight:500;">ক্ষতিগ্রস্ত</th>
+            <th style="text-align:right;padding:6px 8px;color:var(--color-text-secondary);font-weight:500;">মৃত্যু</th>
+            <th style="text-align:right;padding:6px 8px;color:var(--color-text-secondary);font-weight:500;">আহত</th>
+            <th style="text-align:right;padding:6px 8px;color:var(--color-text-secondary);font-weight:500;">ঘর ধ্বংস</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr style="border-bottom:0.5px solid var(--color-border-tertiary);">
+            <td style="padding:8px;font-weight:500;color:#E24B4A;">সিডর (২০০৭)</td>
+            <td style="text-align:right;padding:8px;">২,১০,০০০</td>
+            <td style="text-align:right;padding:8px;color:#E24B4A;font-weight:500;">৯৪</td>
+            <td style="text-align:right;padding:8px;">১,৬৭৮</td>
+            <td style="text-align:right;padding:8px;">২৭,৮৯৫</td>
+          </tr>
+          <tr style="border-bottom:0.5px solid var(--color-border-tertiary);">
+            <td style="padding:8px;font-weight:500;color:#EF9F27;">আইলা (২০০৯)</td>
+            <td style="text-align:right;padding:8px;">~৯০,০০০</td>
+            <td style="text-align:right;padding:8px;color:#1D9E75;font-weight:500;">০</td>
+            <td style="text-align:right;padding:8px;">১৫২</td>
+            <td style="text-align:right;padding:8px;">১৮,১২৮</td>
+          </tr>
+          <tr style="border-bottom:0.5px solid var(--color-border-tertiary);">
+            <td style="padding:8px;font-weight:500;color:#888780;">মহাসেন (২০১৩)</td>
+            <td style="text-align:right;padding:8px;">~৩০,০০০</td>
+            <td style="text-align:right;padding:8px;">৩</td>
+            <td style="text-align:right;padding:8px;">১৩৬</td>
+            <td style="text-align:right;padding:8px;">২১৮</td>
+          </tr>
+          <tr>
+            <td style="padding:8px;font-weight:500;color:#D4537E;">রেমাল (২০২৪)</td>
+            <td style="text-align:right;padding:8px;">উল্লেখযোগ্য</td>
+            <td style="text-align:right;padding:8px;">—</td>
+            <td style="text-align:right;padding:8px;">—</td>
+            <td style="text-align:right;padding:8px;">ক্ষতিগ্রস্ত</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <div class="card section">
+    <p class="section-title">সর্বাধিক ঝুঁকিপূর্ণ ইউনিয়ন (LVI স্কোর)</p>
+    <div class="bar-row"><span class="bar-label">লতাচাপলী</span><div class="bar-track"><div class="bar-fill" style="width:74%;background:#E24B4A;"></div></div><span class="bar-pct">০.৩৭</span></div>
+    <div class="bar-row"><span class="bar-label">খাপড়াভাঙ্গা</span><div class="bar-track"><div class="bar-fill" style="width:74%;background:#E24B4A;"></div></div><span class="bar-pct">০.৩৭</span></div>
+    <div class="bar-row"><span class="bar-label">লালুয়া</span><div class="bar-track"><div class="bar-fill" style="width:74%;background:#E24B4A;"></div></div><span class="bar-pct">০.৩৭</span></div>
+    <div class="bar-row"><span class="bar-label">ধুলাসার</span><div class="bar-track"><div class="bar-fill" style="width:54%;background:#EF9F27;"></div></div><span class="bar-pct">০.২৭</span></div>
+    <p style="font-size:12px;color:var(--color-text-secondary);margin:8px 0 0;">LVI = Livelihood Vulnerability Index (উচ্চতর = বেশি ঝুঁকি)</p>
+  </div>
+
+  <div class="card section">
+    <p class="section-title">প্রধান দুর্যোগ ঝুঁকি</p>
+    <div style="display:flex;flex-wrap:wrap;gap:6px;">
+      <span class="tag" style="background:#FCEBEB;color:#501313;">ঘূর্ণিঝড়</span>
+      <span class="tag" style="background:#FCEBEB;color:#501313;">জলোচ্ছ্বাস</span>
+      <span class="tag" style="background:#FCEBEB;color:#501313;">বন্যা</span>
+      <span class="tag" style="background:#FAEEDA;color:#412402;">লবণাক্ততা আক্রমণ</span>
+      <span class="tag" style="background:#FAEEDA;color:#412402;">নদীভাঙন</span>
+      <span class="tag" style="background:#FAEEDA;color:#412402;">জলাবদ্ধতা</span>
+    </div>
+  </div>
+</div>
+
+<!-- INFRASTRUCTURE TAB -->
+<div id="tab-infra" class="tab-section">
+  <div class="grid2 section">
+    <div class="card">
+      <p class="section-title">যোগাযোগ ব্যবস্থা</p>
+      <div class="info-row"><span style="color:var(--color-text-secondary);">পাকা রাস্তা</span><span style="font-weight:500;">৬৯ কিমি</span></div>
+      <div class="info-row"><span style="color:var(--color-text-secondary);">আধা-পাকা রাস্তা</span><span style="font-weight:500;">১০৬ কিমি</span></div>
+      <div class="info-row"><span style="color:var(--color-text-secondary);">কাঁচা রাস্তা</span><span style="font-weight:500;">৭৮ কিমি</span></div>
+      <div class="info-row"><span style="color:var(--color-text-secondary);">জলপথ</span><span style="font-weight:500;">২২২ কিমি</span></div>
+      <div class="info-row"><span style="color:var(--color-text-secondary);">বিদ্যুৎ সুবিধা</span><span style="font-weight:500;">৩১.৬% পরিবার</span></div>
+    </div>
+    <div class="card">
+      <p class="section-title">ধর্মীয় প্রতিষ্ঠান</p>
+      <div class="info-row"><span style="color:var(--color-text-secondary);">মসজিদ</span><span style="font-weight:500;">২৯০টি</span></div>
+      <div class="info-row"><span style="color:var(--color-text-secondary);">মন্দির</span><span style="font-weight:500;">৪৫টি</span></div>
+      <div class="info-row"><span style="color:var(--color-text-secondary);">বৌদ্ধ বিহার</span><span style="font-weight:500;">৮টি</span></div>
+      <div class="info-row"><span style="color:var(--color-text-secondary);">গির্জা</span><span style="font-weight:500;">২টি</span></div>
+      <div class="info-row"><span style="color:var(--color-text-secondary);">মাজার</span><span style="font-weight:500;">১টি</span></div>
+    </div>
+  </div>
+
+  <div class="card section">
+    <p class="section-title">পর্যটন — কুয়াকাটা</p>
+    <div class="info-row"><span style="color:var(--color-text-secondary);">সৈকতের দৈর্ঘ্য</span><span style="font-weight:500;">১৮ কিমি</span></div>
+    <div class="info-row"><span style="color:var(--color-text-secondary);">সৈকতের প্রস্থ</span><span style="font-weight:500;">৩–৩.৫ কিমি</span></div>
+    <div class="info-row"><span style="color:var(--color-text-secondary);">অবস্থান</span><span style="font-weight:500;">বাংলাদেশের ২য় বৃহত্তম সমুদ্রসৈকত</span></div>
+    <div class="info-row"><span style="color:var(--color-text-secondary);">বিশেষত্ব</span><span style="font-weight:500;">একই স্থানে সূর্যোদয় ও সূর্যাস্ত দেখা যায়</span></div>
+    <p style="font-size:12px;color:var(--color-text-secondary);margin:10px 0 0;">শুঁটকি পল্লী কুয়াকাটার ৭ কিমি পশ্চিমে অবস্থিত — শীতকালে সামুদ্রিক মাছ প্রক্রিয়াজাত করা হয়।</p>
+  </div>
+
+  <div class="card section">
+    <p class="section-title">সাংস্কৃতিক ও সামাজিক প্রতিষ্ঠান</p>
+    <div class="grid4">
+      <div style="text-align:center;padding:8px;border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-md);"><p style="font-size:18px;font-weight:500;margin:0;">১৪</p><p style="font-size:11px;color:var(--color-text-secondary);margin:0;">কমিউনিটি সেন্টার</p></div>
+      <div style="text-align:center;padding:8px;border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-md);"><p style="font-size:18px;font-weight:500;margin:0;">২২</p><p style="font-size:11px;color:var(--color-text-secondary);margin:0;">খেলার মাঠ</p></div>
+      <div style="text-align:center;padding:8px;border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-md);"><p style="font-size:18px;font-weight:500;margin:0;">১</p><p style="font-size:11px;color:var(--color-text-secondary);margin:0;">পাবলিক লাইব্রেরি</p></div>
+      <div style="text-align:center;padding:8px;border:0.5px solid var(--color-border-tertiary);border-radius:var(--border-radius-md);"><p style="font-size:18px;font-weight:500;margin:0;">৪</p><p style="font-size:11px;color:var(--color-text-secondary);margin:0;">সিনেমা হল</p></div>
+    </div>
+  </div>
+</div>
+
+<!-- Source -->
+<div style="background:var(--color-background-secondary);border-radius:var(--border-radius-md);padding:0.75rem 1rem;border:0.5px solid var(--color-border-tertiary);margin-top:0.5rem;">
+  <p style="font-size:11px;color:var(--color-text-secondary);margin:0;">📌 উৎস: BBS জনশুমারি ২০১১, Banglapedia, Wikimapia, ReliefWeb, PSTU Journal 2024, ResearchGate। ২০২৫-২৬ আনুমানিক তথ্য প্রক্ষেপণ ভিত্তিক।</p>
+</div>
+
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script>
+function showTab(name) {
+  document.querySelectorAll('.tab-section').forEach(s => s.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('tab-' + name).classList.add('active');
+  event.target.classList.add('active');
+  if (name === 'economy' && !window.econChartDrawn) {
+    window.econChartDrawn = true;
+    const isDark = matchMedia('(prefers-color-scheme: dark)').matches;
+    const textColor = isDark ? '#ccc' : '#555';
+    const gridColor = isDark ? 'rgba(255,255,255,0.08)' : 'rgba(0,0,0,0.07)';
+    new Chart(document.getElementById('econChart'), {
+      type: 'bar',
+      data: {
+        labels: ['কৃষি','ব্যবসা','অন্যান্য','অকৃষি শ্রম','সেবা/চাকরি','পরিবহন','নির্মাণ','ধর্মীয় সেবা'],
+        datasets: [{
+          label: 'আয়ের উৎস %',
+          data: [57.23, 13.50, 15.57, 4.80, 4.56, 2.14, 1.36, 0.21],
+          backgroundColor: ['#1D9E75','#185FA5','#888780','#EF9F27','#7F77DD','#5DCAA5','#D85A30','#D4537E'],
+          borderWidth: 0, borderRadius: 4
+        }]
+      },
+      options: {
+        responsive: true, maintainAspectRatio: false,
+        plugins: { legend: { display: false }, tooltip: { callbacks: { label: ctx => ctx.parsed.y.toFixed(2) + '%' } } },
+        scales: {
+          x: { ticks: { color: textColor, autoSkip: false, maxRotation: 30, font: { size: 11 } }, grid: { display: false } },
+          y: { ticks: { color: textColor, callback: v => v + '%' }, grid: { color: gridColor }, max: 65 }
+        }
+      }
+    });
+  }
+}
+</script>
